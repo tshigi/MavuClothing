@@ -32,9 +32,13 @@ Mavu Clothing store part 2
 
 
 3. Products.html
+<img width="1600" height="720" alt="wedep2 4" src="https://github.com/user-attachments/assets/f5a6cbc9-ce41-41ab-b985-e02647b7571b" />
+
 
 
 4.enquiry.html
+<img width="1600" height="720" alt="wedep2 5" src="https://github.com/user-attachments/assets/249f865b-1a2d-44fe-8538-8509039ae1d2" />
+
 
 
 
