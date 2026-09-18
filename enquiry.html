@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry - Mavu Clothing</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Enquiry Form</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h2>Order Enquiry</h2>
-    <form>
-        <label>Full Name:</label><br>
-        <input type="text" name="name"><br><br>
-        <label>Email:</label><br>
-        <input type="email" name="email"><br><br>
-        <label>What do you want to buy?</label><br>
-        <input type="text" name="product"><br><br>
-        <button type="submit">Send Enquiry</button>
-    </form>
+
+    <header>
+        <h1>Enquiry Form</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+        <main>
+            <h2>Order Enquiry</h2>
+            <form>
+                <label>Full Name:</label><br>
+                <input type="text" name="name" required><br><br>
+                
+                <label>Email:</label><br>
+                <input type="email" name="email" required><br><br>
+                
+                <label>What do you want to buy?</label><br>
+                <input type="text" name="product" placeholder="e.g. Men T-Shirts R150"><br><br>
+                
+                <label>Message:</label><br>
+                <textarea name="message" rows="4" style="width:100%;"></textarea><br><br>
+                
+                <button type="submit" class="button">Send Enquiry</button>
+            </form>
+        </main>
+
+        <aside>
+            <h3>Our Logo</h3>
+            <img src="images/MavuLogo.png" alt="Mavu Logo"
+                 srcset="images/MavuLogo.png 480w, images/MavuLogo.png 768w, images/MavuLogo.png 1200w"
+                 sizes="(max-width: 768px) 100vw, 30vw"
+                 style="width:100%; border-radius:8px;">
+            <p style="margin-top:10px;">We reply within 24 hours.</p>
+            <p>Location: Thohoyandou</p>
+        </aside>
+    </div>
+
+    <footer>
+        <div><h4>Contact</h4><p>071 123 4567</p></div>
+        <div><h4>Location</h4><p>Thohoyandou, Limpopo</p></div>
+        <div><h4>Follow Us</h4><p>Mavu Clothing</p></div>
+    </footer>
+
 </body>
 </html>

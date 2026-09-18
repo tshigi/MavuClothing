@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Mavu Clothing</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Our Products</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h2>Clothes We Sell</h2>
-    <ul>
-        <li>Men T-Shirts - R150</li>
-        <li>Ladies Dresses - R250</li>
-        <li>Kids Clothes - R120</li>
-        <li>Jeans - R300</li>
-    </ul>
-    <img src="images/mavu.jpg" width="300" alt="Products">
+
+    <header>
+        <h1>Mavu Clothing</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+            <a href="products.html">Products</a>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+        <main>
+            <h2>Clothes We Sell</h2>
+            
+            <div class="product-grid">
+
+            
+                <div class="product-card">
+                    <img src="images/mavu.jpg" alt="Products" 
+                         srcset="images/mavu.jpg 480w, images/mavu.jpg 768w, images/mavu.jpg 1200w"
+                         sizes="(max-width: 768px) 100vw, 30vw">
+                    <h3>Men T-Shirts</h3>
+                    <p>R150-R400</p>
+                    <p>Category of Men</p>
+                    <a href="enquiry.html" class="button">Enquire</a>
+                </div>
+
+                
+                <div class="product-card">
+                    <img src="images/wedeImage.jpg" alt="product" 
+                         srcset="images/wedeImage.jpg 480w, images/wedeImage.jpg 768w, images/wedeImage.jpg 1200w"
+                         sizes="(max-width: 768px) 100vw, 30vw">
+                    <h3>Men Fashion</h3>
+                    <p>R100-R500</p>
+                    <p>Category of Men</p>
+                    <a href="enquiry.html" class="button">Enquire</a>
+                </div>
+
+                
+                <div class="product-card">
+                    <img src="images/wede3.jpg" alt="products" 
+                         srcset="images/wede3.jpg 480w, images/wede3.jpg 768w, images/wede3.jpg 1200w"
+                         sizes="(max-width: 768px) 100vw, 30vw">
+                    <h3>Womens Clothes</h3>
+                    <p>R100-R400</p>
+                    <p>Category of Women</p>
+                    <a href="enquiry.html" class="button">Enquire</a>
+                </div>
+
+            
+                <div class="product-card">
+                    <img src="images/wede4.jpg" alt="products" 
+                         srcset="images/wede4.jpg 480w, images/wede4.jpg 768w, images/wede4.jpg 1200w"
+                         sizes="(max-width: 768px) 100vw, 30vw">
+                    <h3>Children clothes</h3>
+                    <p>R150-R500</p>
+                    <a href="enquiry.html" class="button">Enquire</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div><h4>Contact</h4><p>071 123 4567</p></div>
+        <div><h4>Location</h4><p>Thohoyandou</p></div>
+        <div><h4>Follow</h4><p>Mavu Clothing</p></div>
+    </footer>
+
 </body>
 </html>

@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home Page - Mavu Clothing Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mavu Clothing - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mavu Clothing Store</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h2>Welcome to Mavu</h2>
-    <p>We sell affordable and stylish clothes for men, women and kids in Polokwane.</p>
-    <img src="images/Mavu Clothing shop.png" width="300" alt="Mavu clothes">
+
+    <header>
+        <h1>Mavu Clothing</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+        <main>
+            <h2>Welcome to Mavu Clothing</h2>
+            <p>We sell affordable fashion for men, women and kids in Thohoyandou. Quality clothes at R100-R500</p>
+            
+            <img src="images/MavuLogo.png" alt="Mavu Clothing Shop"
+                 srcset="images/MavuLogo.png 480w, images/MavuLogo.png 768w, images/MavuLogo.png 1200w"
+                 sizes="(max-width: 768px) 100vw, 70vw"
+                 style="width:100%; max-width:600px; border-radius:8px; margin:20px 0;">
+
+            <br>
+            <a href="products.html" class="button">View Products</a>
+        </main>
+
+        <aside>
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Affordable Prices</li>
+                <li>Local Brand</li>
+                <li>Quality Material</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div><h4>Contact</h4><p>Phone: 071 123 4567</p></div>
+        <div><h4>Location</h4><p>Polokwane, Limpopo</p></div>
+        <div><h4>Follow Us</h4><p>Facebook: Mavu Clothing</p></div>
+    </footer>
+
 </body>
 </html>
