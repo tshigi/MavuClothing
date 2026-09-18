@@ -23,10 +23,13 @@ Mavu Clothing store part 2
 > Navigation bar from one page to another working
 
 1. Index (Home page)
-   <img width="1600" height="720" alt="wedp2 1" src="https://github.com/user-attachments/assets/1cd4d87d-b9d8-48d6-baf6-62ebc7b40db5" />
+   <img width="1600" height="720" alt="wedep2 3" src="https://github.com/user-attachments/assets/43e1a4bc-7ad5-420a-8373-21d02ce8f193" />
+
+
 
 2. About.html
-   <img width="1600" height="720" alt="wedp2 1" src="https://github.com/user-attachments/assets/784b51ba-8757-48d7-8b56-bda8fe89f0f4" />
+   <img width="1600" height="720" alt="wedep2 2" src="https://github.com/user-attachments/assets/403e485f-4272-4871-b215-30b6860deba8" />
+
 
 3. Products.html
 
@@ -36,7 +39,8 @@ Mavu Clothing store part 2
 
 
 5. Contact.html
-   <img width="1600" height="720" alt="wedep2 2" src="https://github.com/user-attachments/assets/b36839c3-1080-435a-bf17-ff55955a93c9" />
+   <img width="1600" height="720" alt="wedp2 1" src="https://github.com/user-attachments/assets/9510b14c-8cf1-4c8d-a1ac-e32189ccd37f" />
+
 
 
 
