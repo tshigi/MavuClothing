@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mavu Clothing Thohoyandou | Limpopo Streetwear Story</title>
-    <meta name="description" content="About Mavu Clothing Thohoyandou - Local streetwear brand from Thavhani Mall, Limpopo. Our story, mission.">
+    <title>Contact Mavu Clothing Thohoyandou | Thavhani Mall Location</title>
+    <meta name="description" content="Contact Mavu Clothing Thohoyandou - Thavhani Mall Limpopo. Call 076 877 5761. Live map, enquiry form.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>About Mavu Clothing Thohoyandou</h1>
+        <h1>Contact Mavu Clothing Thohoyandou</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -20,13 +21,22 @@
     </header>
     <div class="main-wrapper">
         <main>
-            <h2>Who We Are - Thohoyandou</h2>
-            <p>Mavu Clothing is a local streetwear brand based at Thavhani Mall, Thohoyandou, Limpopo 0950. Started in 2023 to provide affordable fashion R100-R500.</p>
-            <h3>Our Mission</h3>
-            <p>To dress Thohoyandou youth with stylish hoodies, tees and caps at affordable prices. We deliver R50 in Thohoyandou, R99 outside.</p>
-            <h3>Why Choose Us?</h3>
-            <p>- Local brand from Limpopo<br>- Affordable: R100-R500<br>- Located Thavhani Mall next to Shoprite<br>- Mon-Sat 8am-6pm</p>
-            <img src="images/MavuLogo.png" alt="Mavu Logo Thohoyandou" style="width:200px;margin-top:20px;">
+            <h2>Contact Us - Thavhani Mall</h2>
+            <p><strong>Address:</strong> Thavhani Mall, Thohoyandou, Limpopo 0950, next to Shoprite</p>
+            <p><strong>Phone:</strong> 076 877 5761 / 071 123 4567</p>
+            <p><strong>Hours:</strong> Mon-Sat 8am-6pm, Sun 9am-3pm</p>
+            <p><strong>Delivery:</strong> R50 Thohoyandou, R99 outside</p>
+
+            <h3>Live Map - Find Us</h3>
+            <div id="map" style="height:350px;border-radius:8px;"></div>
+
+            <h3 style="margin-top:20px;">Send Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message about hoodies, tees etc" rows="4" required></textarea>
+                <button type="submit">Send Enquiry</button>
+            </form>
         </main>
     </div>
     <footer>
@@ -34,5 +44,12 @@
         <div><h4>Location</h4><p>Thohoyandou, Limpopo</p></div>
         <div><h4>Follow</h4><p>Mavu Clothing</p></div>
     </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-22.9543, 30.4816], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        L.marker([-22.9543, 30.4816]).addTo(map).bindPopup('Mavu Clothing<br>Thavhani Mall Thohoyandou').openPopup();
+    </script>
 </body>
 </html>
