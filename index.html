@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mavu Clothing - Home</title>
+    <title>Mavu Clothing Thohoyandou | Affordable Streetwear Venda | Home</title>
+    <meta name="description" content="Mavu Clothing Thohoyandou sells affordable fashion for men, women, kids R100-R500. Local streetwear brand in Limpopo. Visit us in Thohoyandou.">
+    <meta name="keywords" content="Mavu Clothing Thohoyandou, affordable clothes Venda, streetwear Limpopo">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion-header{cursor:pointer;background:#222;color:#fff;padding:10px;margin-top:5px;border-radius:5px}
+        .accordion-content{display:none;padding:10px;background:#f9f9f9}
+        .accordion-content.active{display:block}
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Mavu Clothing</h1>
+        <h1>Mavu Clothing Thohoyandou</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -21,33 +29,49 @@
 
     <div class="main-wrapper">
         <main>
-            <h2>Welcome to Mavu Clothing</h2>
-            <p>We sell affordable fashion for men, women and kids in Thohoyandou. Quality clothes at R100-R500</p>
+            <h2>Welcome to Mavu Clothing - Thohoyandou's Streetwear</h2>
+            <p>We sell affordable fashion for men, women and kids in Thohoyandou. Quality clothes at R100-R500. Local brand from Venda, Limpopo.</p>
             
-            <img src="images/MavuLogo.png" alt="Mavu Clothing Shop"
+            <img src="images/MavuLogo.png" alt="Mavu Clothing Shop Thohoyandou Limpopo"
                  srcset="images/MavuLogo.png 480w, images/MavuLogo.png 768w, images/MavuLogo.png 1200w"
                  sizes="(max-width: 768px) 100vw, 70vw"
                  style="width:100%; max-width:600px; border-radius:8px; margin:20px 0;">
 
             <br>
             <a href="products.html" class="button">View Products</a>
+
+            <!-- Accordion - Part 3 -->
+            <div style="margin-top:30px;">
+                <h3>Frequently Asked Questions</h3>
+                <div class="accordion-header">What are your prices in Thohoyandou?</div>
+                <div class="accordion-content">Our prices range from R100 to R500. Men T-Shirts R150-R400, Women R100-R400, Kids R150-R500. Delivery R50 in Thohoyandou.</div>
+                
+                <div class="accordion-header">Where are you located?</div>
+                <div class="accordion-content">We are in Thohoyandou, Limpopo, near Thavhani Mall. See map on Contact page.</div>
+                
+                <div class="accordion-header">Do you have stock available now?</div>
+                <div class="accordion-content">Yes, all listed items are IN STOCK. Enquire to confirm size and color availability.</div>
+            </div>
         </main>
 
         <aside>
             <h3>Why Choose Us?</h3>
             <ul>
-                <li>Affordable Prices</li>
-                <li>Local Brand</li>
+                <li>Affordable Prices R100-R500</li>
+                <li>Local Brand - Thohoyandou</li>
                 <li>Quality Material</li>
+                <li>24h Reply</li>
             </ul>
         </aside>
     </div>
 
     <footer>
         <div><h4>Contact</h4><p>Phone: 071 123 4567</p></div>
-        <div><h4>Location</h4><p>Thohoyandou,Limpopo</p></div>
+        <div><h4>Location</h4><p>Thohoyandou, Limpopo</p></div>
         <div><h4>Follow Us</h4><p>Facebook: Mavu Clothing</p></div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
