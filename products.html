@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mavu Clothing Products Thohoyandou | Hoodies T-Shirts Caps R100-R500</title>
-    <meta name="description" content="Shop Mavu Clothing Thohoyandou - Hoodies R599, T-Shirts R299, Caps R199. Affordable streetwear Limpopo. Search products.">
+    <meta name="description" content="Shop Mavu Clothing Thohoyandou - Hoodies R599, T-Shirts R299, Caps R199. Affordable streetwear Limpopo.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,60 +24,64 @@
         <main>
             <h2>Clothes We Sell in Thohoyandou</h2>
             
-            <!-- Search Part 3 -->
-            <input type="text" id="productSearch" placeholder="Search products (e.g Men, Women, Children).." 
+            <input type="text" id="productSearch" placeholder="Search products (e.g hoodie, men, women, kids).." 
                    style="width:80%;padding:10px;margin:15px 0;border-radius:5px;border:1px solid #ccc;"
                    onkeyup="filterProducts()">
 
             <div id="productList" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;">
                 
-                <div class="product-item" data-name="mavu hoodie thohoyandou">
-                    <img src="images/mavu.jpg" alt="Mavu Hoodie Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                    <h3>Mavu Hoodie</h3>
-                    <p>R599</p>
+                <div class="product-item" data-name="hoodie grey black thohoyandou men">
+                    <img src="images/hoodies.jpg" alt="Mavu Hoodie Grey Black Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+                    <h3>Mavu Hoodie Grey & Black</h3>
+                    <p>R599 - Thohoyandou</p>
                 </div>
 
-                <div class="product-item" data-name="mavu t-shirt thohoyandou">
-                    <img src="images/wede1.jpg" alt="Mavu T-Shirt Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                    <h3>Mavu T-Shirt</h3>
-                    <p>R299</p>
+                <div class="product-item" data-name="bulk shirts bundle thohoyandou">
+                    <img src="images/mavu.jpg" alt="Bulk Colour Shirts Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+                    <h3>Bulk Colour Shirts Bundle</h3>
+                    <p>R450 - 10 Pieces</p>
                 </div>
 
-                <div class="product-item" data-name="mavu cap thohoyandou">
-                    <img src="images/wede3.jpg" alt="Mavu Cap Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                    <h3>Mavu Cap</h3>
-                    <p>R199</p>
+                <div class="product-item" data-name="men tshirt colourful thohoyandou">
+                    <img src="images/wede1.jpg" alt="Men Colourful Tees Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+                    <h3>Men's Colour Tees</h3>
+                    <p>R299 - Thohoyandou</p>
                 </div>
 
-                <div class="product-item" data-name="women fashion thohoyandou">
-                    <img src="images/wede4.jpg" alt="Mavu Women Wear Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                    <h3>Women Top</h3>
-                    <p>R350</p>
+                <div class="product-item" data-name="women pants bag thohoyandou">
+                    <img src="images/wede3.jpg" alt="Women Pants Bag Set Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+                    <h3>Women Pants + Bag Set</h3>
+                    <p>R350 - Limpopo</p>
                 </div>
 
-                <div class="product-item" data-name="kids clothes thohoyandou">
-                    <img src="images/wedeImage.jpg" alt="Mavu Kids Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                    <h3>Kids Set</h3>
-                    <p>R450</p>
+                <div class="product-item" data-name="kids dresses women thohoyandou children">
+                    <img src="images/wede4.jpg" alt="Kids Dresses Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+                    <h3>Kids & Women Dresses</h3>
+                    <p>R299 - Children</p>
                 </div>
 
-                <div class="product-item" data-name="mavu logo thohoyandou">
-                    <img src="images/MavuLogo.png" alt="Mavu Clothing Logo Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:contain;border-radius:8px;background:#f0f0f0;">
-                    <h3>Mavu Brand</h3>
-                    <p>R100-R500</p>
+                <div class="product-item" data-name="jeans jacket unisex thohoyandou">
+                    <img src="images/wedeImage.jpg" alt="Jeans Jacket Set Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+                    <h3>Jeans Jacket Set</h3>
+                    <p>R450 - Unisex</p>
+                </div>
+
+                <div class="product-item" data-name="mavu logo brand thohoyandou">
+                    <img src="images/MavuLogo.png" alt="Mavu Clothing Logo Thohoyandou" class="lightbox-img" style="width:100%;height:220px;object-fit:contain;border-radius:8px;background:#f0f0f0;">
+                    <h3>Mavu Brand Logo</h3>
+                    <p>R100-R500 - Custom</p>
                 </div>
 
             </div>
         </main>
     </div>
 
-    <!-- Lightbox -->
     <div id="lightbox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;z-index:9999">
         <img id="lightbox-img" style="max-width:90%;max-height:90%;border-radius:8px;">
     </div>
 
     <footer>
-        <div><h4>Contact</h4><p>071 123 4567</p></div>
+        <div><h4>Contact</h4><p>071 123 4567 Thohoyandou</p></div>
         <div><h4>Location</h4><p>Thohoyandou, Limpopo</p></div>
         <div><h4>Follow</h4><p>Mavu Clothing</p></div>
     </footer>
