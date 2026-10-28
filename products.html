@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO PART 3 -->
-    <title>Mavu Clothing Products | Streetwear Thohoyandou | Shop Men, Women, Kids</title>
-    <meta name="description" content="Shop Mavu Clothing in Thohoyandou - Men T-Shirts R150-R400, Women Clothes, Children Clothes. Search, filter and enquire online. Affordable streetwear in Venda.">
-    <meta name="keywords" content="Mavu Clothing Thohoyandou, streetwear Venda, men t-shirts Thohoyandou, women clothes Thohoyandou, kids clothes Limpopo">
-    <meta name="author" content="Mavu Clothing">
+    <title>Mavu Clothing Products Thohoyandou | Hoodies T-Shirts Caps R100-R500</title>
+    <meta name="description" content="Shop Mavu Clothing Thohoyandou - Hoodies R599, T-Shirts R299, Caps R199. Affordable streetwear Limpopo. Search products.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Mavu Clothing Thohoyandou</h1>
         <nav>
@@ -28,60 +24,56 @@
         <main>
             <h2>Clothes We Sell in Thohoyandou</h2>
             
-            <!-- Search / Filter - Part 3 JS Functionality -->
-            <div style="text-align:center; margin:20px;">
-                <input type="text" id="searchInput" placeholder="Search products (e.g. Men, Women, Children)..." style="padding:10px; width:80%; max-width:400px; border-radius:5px; border:1px solid #ccc;">
-                <p id="searchResult" style="margin-top:10px; color:#555;"></p>
-            </div>
-            
-            <div class="product-grid" id="product-container">
+            <!-- Search Part 3 -->
+            <input type="text" id="productSearch" placeholder="Search products (e.g Men, Women, Children).." 
+                   style="width:80%;padding:10px;margin:15px 0;border-radius:5px;border:1px solid #ccc;"
+                   onkeyup="filterProducts()">
 
-                <div class="product-card">
-                    <img src="images/mavu.jpg" alt="Mavu Men T-Shirts Thohoyandou" class="lightbox-img"
-                         srcset="images/mavu.jpg 480w, images/mavu.jpg 768w, images/mavu.jpg 1200w"
-                         sizes="(max-width: 768px) 100vw, 30vw" style="cursor:pointer;">
-                    <h3>Men T-Shirts</h3>
-                    <p>R150-R400</p>
-                    <p>Category of Men</p>
-                    <a href="enquiry.html" class="button">Enquire</a>
+            <div id="productList" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;">
+                
+                <div class="product-item" data-name="mavu hoodie thohoyandou">
+                    <img src="images/mavu.jpg" alt="Mavu Hoodie Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                    <h3>Mavu Hoodie</h3>
+                    <p>R599</p>
                 </div>
 
-                <div class="product-card">
-                    <img src="images/wedeImage.jpg" alt="Mavu Men Fashion Thohoyandou streetwear" class="lightbox-img"
-                         srcset="images/wedeImage.jpg 480w, images/wedeImage.jpg 768w, images/wedeImage.jpg 1200w"
-                         sizes="(max-width: 768px) 100vw, 30vw" style="cursor:pointer;">
-                    <h3>Men Fashion</h3>
+                <div class="product-item" data-name="mavu t-shirt thohoyandou">
+                    <img src="images/wede1.jpg" alt="Mavu T-Shirt Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                    <h3>Mavu T-Shirt</h3>
+                    <p>R299</p>
+                </div>
+
+                <div class="product-item" data-name="mavu cap thohoyandou">
+                    <img src="images/wede3.jpg" alt="Mavu Cap Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                    <h3>Mavu Cap</h3>
+                    <p>R199</p>
+                </div>
+
+                <div class="product-item" data-name="women fashion thohoyandou">
+                    <img src="images/wede4.jpg" alt="Mavu Women Wear Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                    <h3>Women Top</h3>
+                    <p>R350</p>
+                </div>
+
+                <div class="product-item" data-name="kids clothes thohoyandou">
+                    <img src="images/wedeImage.jpg" alt="Mavu Kids Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                    <h3>Kids Set</h3>
+                    <p>R450</p>
+                </div>
+
+                <div class="product-item" data-name="mavu logo thohoyandou">
+                    <img src="images/MavuLogo.png" alt="Mavu Clothing Logo Thohoyandou" class="lightbox-img" style="width:100%;height:200px;object-fit:contain;border-radius:8px;background:#f0f0f0;">
+                    <h3>Mavu Brand</h3>
                     <p>R100-R500</p>
-                    <p>Category of Men</p>
-                    <a href="enquiry.html" class="button">Enquire</a>
-                </div>
-
-                <div class="product-card">
-                    <img src="images/wede3.jpg" alt="Mavu Womens Clothes Thohoyandou" class="lightbox-img"
-                         srcset="images/wede3.jpg 480w, images/wede3.jpg 768w, images/wede3.jpg 1200w"
-                         sizes="(max-width: 768px) 100vw, 30vw" style="cursor:pointer;">
-                    <h3>Womens Clothes</h3>
-                    <p>R100-R400</p>
-                    <p>Category of Women</p>
-                    <a href="enquiry.html" class="button">Enquire</a>
-                </div>
-
-                <div class="product-card">
-                    <img src="images/wede4.jpg" alt="Mavu Children clothes Thohoyandou Venda" class="lightbox-img"
-                         srcset="images/wede4.jpg 480w, images/wede4.jpg 768w, images/wede4.jpg 1200w"
-                         sizes="(max-width: 768px) 100vw, 30vw" style="cursor:pointer;">
-                    <h3>Children clothes</h3>
-                    <p>R150-R500</p>
-                    <a href="enquiry.html" class="button">Enquire</a>
                 </div>
 
             </div>
         </main>
     </div>
 
-    <!-- Lightbox Gallery - Part 3 -->
+    <!-- Lightbox -->
     <div id="lightbox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;z-index:9999">
-        <img id="lightbox-img" src="" style="max-width:90%;max-height:90%;border-radius:8px;">
+        <img id="lightbox-img" style="max-width:90%;max-height:90%;border-radius:8px;">
     </div>
 
     <footer>
@@ -90,7 +82,6 @@
         <div><h4>Follow</h4><p>Mavu Clothing</p></div>
     </footer>
 
-    <!-- JS - Part 3 Functionality -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
 </body>
