@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Mavu Clothing</title>
+    <title>Enquiry - Mavu Clothing Thohoyandou | Price & Stock Check</title>
+    <meta name="description" content="Enquire about Mavu Clothing products in Thohoyandou. Get price, availability, and reply within 24 hours. Men, Women, Children streetwear.">
+    <meta name="keywords" content="Mavu Clothing enquiry Thohoyandou, order clothes Venda, price check">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Enquiry Form</h1>
+        <h1>Enquiry Form - Mavu Thohoyandou</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -21,32 +24,40 @@
 
     <div class="main-wrapper">
         <main>
-            <h2>Order Enquiry</h2>
-            <form>
+            <h2>Order Enquiry - Check Price & Availability</h2>
+            <form onsubmit="return validateEnquiry(event)" novalidate>
                 <label>Full Name:</label><br>
-                <input type="text" name="name" required><br><br>
+                <input type="text" id="enqName" name="name" required placeholder="e.g. Thendo Mavu" style="width:100%;padding:8px;"><br><br>
                 
                 <label>Email:</label><br>
-                <input type="email" name="email" required><br><br>
+                <input type="email" id="enqEmail" name="email" required placeholder="your@email.com" style="width:100%;padding:8px;"><br><br>
                 
                 <label>What do you want to buy?</label><br>
-                <input type="text" name="product" placeholder="e.g. Men T-Shirts R150"><br><br>
+                <select id="enqProduct" name="product" style="width:100%;padding:8px;">
+                    <option value="Men T-Shirts R150-R400">Men T-Shirts R150-R400</option>
+                    <option value="Men Fashion R100-R500">Men Fashion R100-R500</option>
+                    <option value="Womens Clothes R100-R400">Womens Clothes R100-R400</option>
+                    <option value="Children clothes R150-R500">Children clothes R150-R500</option>
+                </select><br><br>
                 
                 <label>Message:</label><br>
-                <textarea name="message" rows="4" style="width:100%;"></textarea><br><br>
+                <textarea id="enqMessage" name="message" rows="4" style="width:100%;padding:8px;" placeholder="Size, color, quantity"></textarea><br><br>
                 
-                <button type="submit" class="button">Send Enquiry</button>
+                <p id="enqError" style="color:red; font-weight:bold;"></p>
+                <div id="enqResult" style="margin-top:10px; padding:10px; background:#f0f0f0; border-radius:5px;"></div><br>
+
+                <button type="submit" class="button" style="padding:10px 20px;">Send Enquiry</button>
             </form>
         </main>
 
         <aside>
             <h3>Our Logo</h3>
-            <img src="images/MavuLogo.png" alt="Mavu Logo"
+            <img src="images/MavuLogo.png" alt="Mavu Clothing Logo Thohoyandou"
                  srcset="images/MavuLogo.png 480w, images/MavuLogo.png 768w, images/MavuLogo.png 1200w"
                  sizes="(max-width: 768px) 100vw, 30vw"
                  style="width:100%; border-radius:8px;">
             <p style="margin-top:10px;">We reply within 24 hours.</p>
-            <p>Location: Thohoyandou</p>
+            <p>Location: Thohoyandou, Limpopo - Cost: Delivery R50 local, R99 outside Venda</p>
         </aside>
     </div>
 
@@ -56,5 +67,7 @@
         <div><h4>Follow Us</h4><p>Mavu Clothing</p></div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
