@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mavu Clothing</title>
+    <title>Contact Mavu Clothing Thohoyandou | Thavhani Mall | Map & Hours</title>
+    <meta name="description" content="Contact Mavu Clothing in Thohoyandou - Phone 076 877 5761, Email info@mavuclothing.co.za, Thavhani Mall. Open Mon-Sat 8am-6pm. View map.">
+    <meta name="keywords" content="Mavu Clothing contact Thohoyandou, Thavhani Mall clothes, phone number">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Contact Us</h1>
+        <h1>Contact Mavu Clothing Thohoyandou</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -21,22 +24,39 @@
 
     <div class="main-wrapper">
         <main>
-            <h2>Contact Details</h2>
+            <h2>Contact Details - Thohoyandou</h2>
             <p><strong>Phone:</strong> 076 877 5761</p>
             <p><strong>Email:</strong> info@mavuclothing.co.za</p>
-            <p><strong>Address:</strong> Thavhani Mall, Thohoyandou</p>
+            <p><strong>Address:</strong> Thavhani Mall, Thohoyandou, Limpopo 0950</p>
             <p><strong>Hours:</strong> Mon-Sat 8am - 6pm</p>
             
-            <a href="enquiry.html" class="button">Send Enquiry</a>
+            <!-- Map Part 3 - Leaflet -->
+            <h3>Find Us on Map</h3>
+            <div id="map" style="height:350px; margin:20px 0; border-radius:10px; border:2px solid #ccc;"></div>
+            
+            <h3>Quick Contact Form</h3>
+            <form onsubmit="return validateContact(event)" novalidate>
+                <input type="text" id="contactName" placeholder="Your Name" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+                <input type="email" id="contactEmail" placeholder="Your Email" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+                <input type="tel" id="contactPhone" placeholder="Phone 10 digits e.g. 0768775761" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+                <textarea id="contactMsg" placeholder="Message" style="width:100%;padding:8px;height:80px;"></textarea><br>
+                <p id="contactError" style="color:red;font-weight:bold;"></p>
+                <p id="contactResult" style="color:green;"></p>
+                <button type="submit" class="button" style="padding:10px 20px; margin-top:10px;">Send Message</button>
+            </form>
+
+            <br>
+            <a href="enquiry.html" class="button">Send Product Enquiry</a>
         </main>
 
         <aside>
             <h3>Find Us</h3>
-            <img src="images/MavuLogo.png" alt="Mavu Clothing Logo"
+            <img src="images/MavuLogo.png" alt="Mavu Clothing Logo Thohoyandou Thavhani Mall"
                  srcset="images/MavuLogo.png 480w, images/MavuLogo.png 768w, images/MavuLogo.png 1200w"
                  sizes="(max-width: 768px) 100vw, 30vw"
                  style="width:100%; border-radius:8px;">
-            <p style="margin-top:10px;"><strong>Location:</strong><br>Thavhani Mall<br>Thohoyandou, Limpopo</p>
+            <p style="margin-top:10px;"><strong>Location:</strong><br>Thavhani Mall<br>Thohoyandou, Limpopo<br>Next to Shoprite</p>
+            <p><strong>Cost:</strong> Delivery R50 Thohoyandou, R99 outside</p>
         </aside>
     </div>
 
@@ -46,5 +66,7 @@
         <div><h4>Follow Us</h4><p>Mavu Clothing</p></div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
