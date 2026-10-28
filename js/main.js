@@ -1,4 +1,3 @@
-
 function filterProducts() {
     let input = document.getElementById('productSearch').value.toLowerCase();
     let products = document.getElementsByClassName('product-item');
@@ -11,7 +10,6 @@ function filterProducts() {
         }
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
     let lightbox = document.getElementById('lightbox');
