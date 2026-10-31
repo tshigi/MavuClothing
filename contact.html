@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Mavu Clothing Thohoyandou | Thavhani Mall Location</title>
-    <meta name="description" content="Contact Mavu Clothing Thohoyandou - Thavhani Mall Limpopo. Call 076 877 5761. Live map, enquiry form.">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <title>Contact Mavu Clothing Thohoyandou</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header>
-        <h1>Contact Mavu Clothing Thohoyandou</h1>
+        <h1>Mavu Clothing Thohoyandou</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -21,35 +20,35 @@
     </header>
     <div class="main-wrapper">
         <main>
-            <h2>Contact Us - Thavhani Mall</h2>
-            <p><strong>Address:</strong> Thavhani Mall, Thohoyandou, Limpopo 0950, next to Shoprite</p>
-            <p><strong>Phone:</strong> 076 877 5761 / 071 123 4567</p>
-            <p><strong>Hours:</strong> Mon-Sat 8am-6pm, Sun 9am-3pm</p>
-            <p><strong>Delivery:</strong> R50 Thohoyandou, R99 outside</p>
+            <h2>CONTACT US - THAVHANI MALL</h2>
+            <p style="margin:15px 0;line-height:1.8;">
+                <strong>Address:</strong> Thavhani Mall, Thohoyandou, Limpopo 0950, next to Shoprite<br>
+                <strong>Phone:</strong> 076 877 5761 / 071 123 4567<br>
+                <strong>Hours:</strong> Mon-Sat 8am-6pm, Sun 9am-3pm<br>
+                <strong>Delivery:</strong> R50 Thohoyandou, R99 outside
+            </p>
+            
+            <h3 style="font-family:Poppins;margin:20px 0 10px;color:white;text-transform:uppercase;">Live Map - Find Us</h3>
+            <div id="map" style="height:380px;width:100%;border:2px solid #222;border-radius:4px;"></div>
 
-            <h3>Live Map - Find Us</h3>
-            <div id="map" style="height:350px;border-radius:8px;"></div>
-
-            <h3 style="margin-top:20px;">Send Message</h3>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message about hoodies, tees etc" rows="4" required></textarea>
-                <button type="submit">Send Enquiry</button>
+            <h3 style="font-family:Poppins;margin:30px 0 15px;color:white;text-transform:uppercase;">Send Message</h3>
+            <form id="contactForm" style="display:flex;flex-wrap:wrap;gap:10px;background:#111;padding:15px;border:1px solid #222;">
+                <input type="text" id="cName" required placeholder="Your Name" style="flex:1;min-width:120px;padding:10px;background:#000;color:white;border:1px solid #333;">
+                <input type="email" id="cEmail" required placeholder="Your Email" style="flex:1;min-width:120px;padding:10px;background:#000;color:white;border:1px solid #333;">
+                <textarea id="cMsg" required placeholder="Your Message about hoodies, tees etc" rows="2" style="flex:2;min-width:200px;padding:10px;background:#000;color:white;border:1px solid #333;"></textarea>
+                <button type="submit" style="background:white;color:black;padding:10px 20px;border:none;font-family:Poppins;font-weight:800;text-transform:uppercase;font-size:12px;cursor:pointer;">Send Enquiry</button>
             </form>
         </main>
     </div>
-    <footer>
-        <div><h4>Contact</h4><p>076 877 5761</p></div>
-        <div><h4>Location</h4><p>Thohoyandou, Limpopo</p></div>
-        <div><h4>Follow</h4><p>Mavu Clothing</p></div>
-    </footer>
+    <footer><p>Mavu Clothing Thohoyandou - 076 877 5761 - Thavhani Mall</p></footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([-22.9543, 30.4816], 15);
+        // MAP
+        var map = L.map('map').setView([-22.9545, 30.4844], 14);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-        L.marker([-22.9543, 30.4816]).addTo(map).bindPopup('Mavu Clothing<br>Thavhani Mall Thohoyandou').openPopup();
+        L.marker([-22.9545, 30.4844]).addTo(map).bindPopup("Mavu Clothing<br>Thavhani Mall Thohoyandou").openPopup();
     </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
