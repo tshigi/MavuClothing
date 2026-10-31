@@ -1,64 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Mavu Clothing Thohoyandou</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Enquiry Mavu</title><link rel="stylesheet" href="style.css"></head>
 <body>
-    <header>
-        <h1>Mavu Clothing Thohoyandou</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="main-wrapper">
-        <main>
-            <h2>ORDER ENQUIRY - CHECK PRICE & AVAILABILITY</h2>
-            <form id="enquiryForm" style="display:flex;flex-direction:column;gap:18px;margin-top:20px;">
-                <div>
-                    <label style="font-family:Poppins;font-weight:600;color:white;text-transform:uppercase;font-size:13px;letter-spacing:1px;">Full Name:</label>
-                    <input type="text" id="fullName" required placeholder="e.g. Thendo Mavu" style="width:100%;padding:12px;margin-top:6px;background:#000;color:white;border:1px solid #333;border-radius:2px;">
-                </div>
-                <div>
-                    <label style="font-family:Poppins;font-weight:600;color:white;text-transform:uppercase;font-size:13px;letter-spacing:1px;">Email:</label>
-                    <input type="email" id="email" required placeholder="your@email.com" style="width:100%;padding:12px;margin-top:6px;background:#000;color:white;border:1px solid #333;border-radius:2px;">
-                </div>
-                <div>
-                    <label style="font-family:Poppins;font-weight:600;color:white;text-transform:uppercase;font-size:13px;letter-spacing:1px;">What do you want to buy?</label>
-                    <select id="productSelect" style="width:100%;padding:12px;margin-top:6px;background:#000;color:white;border:1px solid #333;border-radius:2px;">
-                        <option>Mavu Hoodies Grey & Black - R350-R450</option>
-                        <option>Mavu Fashion Wear - R250-R400</option>
-                        <option>Formal Men Suits - R300-R500</option>
-                        <option>Formal Women Dresses - R250-R450</option>
-                        <option>Mens Casual Wear - R150-R300</option>
-                        <option>Summer Shorts Collection - R100-R250</option>
-                        <option>Bulk Colour Shirts Bundle - R200-R450</option>
-                        <option>Women Pants + Bag Set - R180-R350</option>
-                        <option>Kids Dresses Collection - R120-R299</option>
-                        <option>Mavu Everyday Wear - R150-R300</option>
-                        <option>Mavu Brand Custom Logo - R100-R500</option>
-                    </select>
-                </div>
-                <div>
-                    <label style="font-family:Poppins;font-weight:600;color:white;text-transform:uppercase;font-size:13px;letter-spacing:1px;">Message:</label>
-                    <textarea id="message" required placeholder="Size, color, quantity" rows="4" style="width:100%;padding:12px;margin-top:6px;background:#000;color:white;border:1px solid #333;border-radius:2px;"></textarea>
-                </div>
-                <button type="submit" style="background:white;color:black;padding:14px;border:none;font-family:Poppins;font-weight:800;text-transform:uppercase;letter-spacing:2px;cursor:pointer;transition:0.3s;margin-top:10px;">Send Enquiry</button>
-            </form>
-            <div style="margin-top:30px;padding:15px;background:#000;border:1px solid #222;">
-                <h3 style="font-family:Poppins;color:white;">Our Logo</h3>
-                <img src="images/MavuLogo.png" style="width:120px;margin-top:10px;background:#f4f4f4;padding:10px;">
-                <p style="margin-top:10px;color:#888;">Thohoyandou - Thavhani Mall - 076 877 5761</p>
-            </div>
-        </main>
-    </div>
-    <footer><p>Mavu Clothing Thohoyandou - 076 877 5761 - Thavhani Mall</p></footer>
-    <script src="js/main.js"></script>
+<header><div class="header-logo"><img src="images/MavuLogo.png"><h1>Mavu Clothing Thohoyandou</h1></div><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav></header>
+<div class="main-wrapper"><main>
+<h2>Order Enquiry</h2>
+<form id="enquiryForm" style="display:flex; flex-direction:column; gap:12px; margin-top:15px;">
+<div><label>Full Name:</label><input type="text" id="fullName" required placeholder="Your name"></div>
+<div><label>Email:</label><input type="email" id="email" required placeholder="your@email.com"></div>
+<div><label>Product:</label><select id="productSelect"><option>Mavu Hoodies - R350-R450</option><option>Fashion Wear - R250-R400</option><option>Formal Suits - R300-R500</option><option>Shorts - R100-R250</option><option>Kids Dresses - R120-R299</option><option>Custom Logo - R100-R500</option></select></div>
+<div><label>Message (size, color, quantity):</label><textarea id="message" required rows="3" placeholder="e.g. Medium, Blue, 1"></textarea></div>
+<button type="submit">Send Enquiry</button>
+</form>
+</main></div>
+<footer>Mavu Clothing - 076 877 5761 - Thavhani Mall</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
