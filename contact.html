@@ -1,54 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Mavu Clothing Thohoyandou</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-</head>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Mavu</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/></head>
 <body>
-    <header>
-        <h1>Mavu Clothing Thohoyandou</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="main-wrapper">
-        <main>
-            <h2>CONTACT US - THAVHANI MALL</h2>
-            <p style="margin:15px 0;line-height:1.8;">
-                <strong>Address:</strong> Thavhani Mall, Thohoyandou, Limpopo 0950, next to Shoprite<br>
-                <strong>Phone:</strong> 076 877 5761 / 071 123 4567<br>
-                <strong>Hours:</strong> Mon-Sat 8am-6pm, Sun 9am-3pm<br>
-                <strong>Delivery:</strong> R50 Thohoyandou, R99 outside
-            </p>
-            
-            <h3 style="font-family:Poppins;margin:20px 0 10px;color:white;text-transform:uppercase;">Live Map - Find Us</h3>
-            <div id="map" style="height:380px;width:100%;border:2px solid #222;border-radius:4px;"></div>
-
-            <h3 style="font-family:Poppins;margin:30px 0 15px;color:white;text-transform:uppercase;">Send Message</h3>
-            <form id="contactForm" style="display:flex;flex-wrap:wrap;gap:10px;background:#111;padding:15px;border:1px solid #222;">
-                <input type="text" id="cName" required placeholder="Your Name" style="flex:1;min-width:120px;padding:10px;background:#000;color:white;border:1px solid #333;">
-                <input type="email" id="cEmail" required placeholder="Your Email" style="flex:1;min-width:120px;padding:10px;background:#000;color:white;border:1px solid #333;">
-                <textarea id="cMsg" required placeholder="Your Message about hoodies, tees etc" rows="2" style="flex:2;min-width:200px;padding:10px;background:#000;color:white;border:1px solid #333;"></textarea>
-                <button type="submit" style="background:white;color:black;padding:10px 20px;border:none;font-family:Poppins;font-weight:800;text-transform:uppercase;font-size:12px;cursor:pointer;">Send Enquiry</button>
-            </form>
-        </main>
-    </div>
-    <footer><p>Mavu Clothing Thohoyandou - 076 877 5761 - Thavhani Mall</p></footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // MAP
-        var map = L.map('map').setView([-22.9545, 30.4844], 14);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-        L.marker([-22.9545, 30.4844]).addTo(map).bindPopup("Mavu Clothing<br>Thavhani Mall Thohoyandou").openPopup();
-    </script>
-    <script src="js/main.js"></script>
+<header><div class="header-logo"><img src="images/MavuLogo.png"><h1>Mavu Clothing Thohoyandou</h1></div><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav></header>
+<div class="main-wrapper"><main>
+<h2>Contact Us - Thavhani Mall</h2>
+<p><b>Address:</b> Thavhani Mall, Thohoyandou, Limpopo<br><b>Phone:</b> 076 877 5761<br><b>Hours:</b> Mon-Sat 8am-6pm, Sun 9am-3pm<br><b>Delivery:</b> R50 Thohoyandou, R99 outside</p>
+<h2 style="margin-top:20px;">Find Us on Map</h2>
+<div id="map" style="height:300px; border:1px solid #333; border-radius:6px;"></div>
+<h2 style="margin-top:20px;">Send Message</h2>
+<form id="contactForm" style="display:flex; flex-direction:column; gap:10px;">
+<input type="text" id="cName" required placeholder="Your Name"><input type="email" id="cEmail" required placeholder="Your Email"><textarea id="cMsg" required placeholder="Your message"></textarea><button type="submit">Send Message</button>
+</form>
+</main></div>
+<footer>Mavu Clothing - 076 877 5761 - Thavhani Mall</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>var map = L.map('map').setView([-22.9545, 30.4844], 13); L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map); L.marker([-22.9545, 30.4844]).addTo(map).bindPopup("Mavu Clothing<br>Thavhani Mall").openPopup();</script>
+<script src="js/main.js"></script>
 </body>
 </html>
