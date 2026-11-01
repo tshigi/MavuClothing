@@ -64,6 +64,19 @@ nav a:hover {
   color: white;
 }
 
+/* HAMBURGER - HIDDEN ON COMPUTER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   max-width: 1200px;
   margin: 0 auto;
@@ -275,10 +288,33 @@ footer {
   letter-spacing: 1px;
 }
 
+/* MOBILE ONLY - LIKE NIKE */
 @media(max-width: 750px) {
   header {
+    flex-direction: row; /* FIX - keep in one line */
+    gap: 0;
+  }
+  
+  .hamburger {
+    display: block; /* SHOW ON PHONE ONLY */
+  }
+
+  nav#navMenu {
+    display: none;
     flex-direction: column;
-    gap: 12px;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background: black;
+    width: 220px;
+    padding: 25px;
+    gap: 18px;
+    border-left: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  nav#navMenu.active {
+    display: flex;
   }
 
   .hero h2 {

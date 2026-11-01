@@ -3,14 +3,26 @@ function filterProducts() {
   var items = document.getElementsByClassName("item");
   for (var i = 0; i < items.length; i++) {
     var n = items[i].getAttribute("data-name");
-    if (n.includes(s)) {
+    if (n && n.toLowerCase().includes(s)) {
       items[i].style.display = "block";
+    } else if (!n) {
+      var txt = items[i].textContent.toLowerCase();
+      items[i].style.display = txt.includes(s) ? "block" : "none";
     } else {
       items[i].style.display = "none";
     }
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
+  // HAMBURGER MENU - phone only like Nike
+  var hamburger = document.getElementById("hamburger");
+  var navMenu = document.getElementById("navMenu");
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function() {
+      navMenu.classList.toggle("active");
+    });
+  }
+
   var box = document.getElementById("lightbox");
   var big = document.getElementById("lightbox-img");
   var pics = document.querySelectorAll(".pic");
