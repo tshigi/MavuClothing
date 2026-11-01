@@ -45,6 +45,54 @@ Mavu Clothing store part 2
 5. Contact.html
    <img width="1600" height="720" alt="wedp2 1" src="https://github.com/user-attachments/assets/9510b14c-8cf1-4c8d-a1ac-e32189ccd37f" />
 
+   # Mavu Clothing Store - WEDE5020 POE Part 3 Final
+
+**Live Website:** https://tshigi.github.io/MavuClothing/
+**Module:** WEDE5020 | Location: Thavhani Mall, Thohoyandou
+
+### Part 3 - Upgrades and Changes
+
+For POE Part 3, the website from Part 1 and 2 was upgraded to meet all final requirements:
+
+**What was upgraded for Part 3:
+
+1.  **Live Location Map Added - Contact Page**
+    - Added live Google Maps embed for Thavhani Mall, Thohoyandou
+    - Interactive map with pin, directions and "Open in Maps"
+    - Works on live GitHub Pages
+    -<img width="1600" height="1198" alt="mavu2" src="https://github.com/user-attachments/assets/49fc6434-7466-468c-8814-0c9853369432" />
+ 
+
+2.  **Professional Black & White Theme**
+    - Updated CSS to black header/footer with white content boxes
+    - Consistent branding with Mavu Logo
+
+3.  **Products Page Improved**
+    - Products resized to small uniform cards
+    - Added Flexbox grid layout
+    - Responsive on mobile
+    - <img width="1600" height="1198" alt="mavu1" src="https://github.com/user-attachments/assets/fc2dd525-b5ab-49ec-a353-cdbc4ddcfbe0" />
+
+
+4.  **JavaScript Functionality Added**
+    - Created `js/main.js` linked to all pages
+    - Form validation for Enquiry and Contact forms
+    - Interactive alerts
+    - <img width="1600" height="1198" alt="mavu3" src="https://github.com/user-attachments/assets/2f1f299d-6ff3-4c61-ba8d-df442ffd88b5" />
+
+
+5.  **Responsive & SEO Improvements**
+    - Added meta descriptions and viewport tags
+    - Media queries for mobile devices
+    - External stylesheet `style.css` for all pages
+
+6.  **Live Deployment**
+    - Website deployed and tested on GitHub Pages
+    - All pages linked and working
+
+**Live Link:** https://tshigi.github.io/MavuClothing/
+
+
 
 
 
