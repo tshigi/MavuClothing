@@ -78,7 +78,8 @@ For POE Part 3, the website from Part 1 and 2 was upgraded to meet all final req
     - Created `js/main.js` linked to all pages
     - Form validation for Enquiry and Contact forms
     - Interactive alerts
-    - <img width="1600" height="1198" alt="mavu3" src="https://github.com/user-attachments/assets/2f1f299d-6ff3-4c61-ba8d-df442ffd88b5" />
+    - <img width="1600" height="1198" alt="wede6" src="https://github.com/user-attachments/assets/a6c2deea-c686-4aa2-8927-6bbeba2ceb67" />
+
 
 
 5.  **Responsive & SEO Improvements**
