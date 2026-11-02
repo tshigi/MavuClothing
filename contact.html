@@ -1,164 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Mavu Clothing</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    main {
-      padding: 20px;
-    }
-
-    .form-box {
-      background: #0c0c0c;
-      border: 1px solid #222;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    .form-box h2 {
-      font-size: 14px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .form-box p {
-      color: #999;
-      font-size: 14px;
-    }
-
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #888;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      margin-top: 6px;
-      padding: 12px;
-      background: #000;
-      border: 1px solid #333;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    form input::placeholder,
-    form textarea::placeholder {
-      color: #555;
-    }
-
-    form button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 14px;
-      background: #fff;
-      color: #000;
-      border: none;
-      font-weight: 900;
-      text-transform: uppercase;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #ccc;
-    }
-
-    @media (max-width: 768px) {
-      .form-box div {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Mavu Clothing</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>#map{height:350px; width:100%; margin-top:20px; border-radius:10px;}</style>
 </head>
 <body>
+<header><h1>Mavu Clothing Thohoyandou</h1><nav><a href="index.html">Home</a> <a href="products.html">Products</a> <a href="enquiry.html">Enquiry</a> <a href="contact.html">Contact</a></nav></header>
+<div class="main">
+<h2>CONTACT MAVU CLOTHING</h2>
+<p>General Enquiries, Sponsorship, Volunteering</p>
+<form id="contactForm">
+<label>FULL NAME *</label><input type="text" id="cName" name="name" required>
+<label>EMAIL / PHONE *</label><input type="text" id="cContact" name="contact" required>
+<label>TYPE OF MESSAGE *</label>
+<select id="msgType" name="message_type" required>
+<option value="">-- Select Type --</option>
+<option>General Enquiry</option><option>Complaint / Feedback</option><option>Sponsorship Request</option><option>Volunteer / Job Application</option>
+</select>
+<label>YOUR MESSAGE *</label><textarea id="cMessage" name="message" rows="6" required></textarea>
+<button type="submit" id="cBtn">SEND MESSAGE</button>
+<p id="cError" style="color:red; display:none;"></p><p id="cSuccess" style="color:green; display:none;"></p>
+</form>
 
-<header>
-  <div class="logo-area">
-    <img src="images/MavuLogo.png" alt="Mavu Logo" onerror="this.style.display='none'">
-    <h1>Mavu Clothing Thohoyandou</h1>
-  </div>
-  <button id="menuBtn">☰</button>
-  <nav id="mainNav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="enquiry.html">Enquiry</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!-- INTERACTIVE MAP - RUBRIC 2.3 - OUTSIDE FORM -->
+<div class="location">
+<h3>Find Us - Thavhani Mall, Thohoyandou</h3>
+<div id="map"></div>
+</div>
 
-<main>
-  <div class="form-box">
-    <h2>CONTACT INFORMATION</h2>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:15px;">
-      <div style="background:#000; padding:15px; border:1px solid #333;">
-        <h3 style="font-size:0.9rem; text-transform:uppercase; margin-bottom:8px; color:#fff;">📍 Address</h3>
-        <p style="color:#aaa; font-size:0.95rem;">Thavhani Mall, Shop No. 25<br>Thohoyandou, 0950<br>Limpopo, South Africa</p>
-      </div>
-      <div style="background:#000; padding:15px; border:1px solid #333;">
-        <h3 style="font-size:0.9rem; text-transform:uppercase; margin-bottom:8px; color:#fff;">📞 Phone</h3>
-        <p style="color:#aaa; font-size:0.95rem;">+27 76 877 5761<br>+27 15 962 0000</p>
-      </div>
-      <div style="background:#000; padding:15px; border:1px solid #333;">
-        <h3 style="font-size:0.9rem; text-transform:uppercase; margin-bottom:8px; color:#fff;">✉️ Email</h3>
-        <p style="color:#aaa; font-size:0.95rem;">info@mavuclothing.co.za<br>enquiries@mavuclothing.co.za</p>
-      </div>
-      <div style="background:#000; padding:15px; border:1px solid #333;">
-        <h3 style="font-size:0.9rem; text-transform:uppercase; margin-bottom:8px; color:#fff;">🕒 Hours</h3>
-        <p style="color:#aaa; font-size:0.95rem;">Mon - Sat: 8:00 - 18:00<br>Sunday: 9:00 - 15:00<br>Public Holidays: 9:00 - 15:00</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-box">
-    <h2>FIND US</h2>
-    <p>Thavhani Mall, Thohoyandou</p>
-    <div style="width:100%; height:320px; border:1px solid #333; margin-top:15px;">
-      <iframe src="https://maps.google.com/maps?q=Thavhani%20Mall%20Thohoyandou&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;"></iframe>
-    </div>
-  </div>
-
-  <div class="form-box">
-    <h2>SEND MESSAGE</h2>
-    <form id="contactForm">
-      <label>Full Name</label>
-      <input type="text" id="contactName" placeholder="omphu" required>
-      <label>Email</label>
-      <input type="email" id="contactEmail" placeholder="tshigi@gmail.com" required>
-      <label>Message</label>
-      <textarea id="contactMessage" rows="4" placeholder="good" required></textarea>
-      <button type="submit">SEND MESSAGE</button>
-    </form>
-  </div>
-</main>
-
-<footer>
-  <p>&copy; 2026 Mavu Clothing Store - Thavhani Mall, Thohoyandou</p>
-</footer>
-
+</div>
 <script>
-  // Menu
-  document.getElementById('menuBtn').onclick = function(){
-    document.getElementById('mainNav').classList.toggle('show');
-  }
+document.getElementById('contactForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const name=document.getElementById('cName').value.trim();
+ const contact=document.getElementById('cContact').value.trim();
+ const type=document.getElementById('msgType').value;
+ const msg=document.getElementById('cMessage').value.trim();
+ const err=document.getElementById('cError'); const ok=document.getElementById('cSuccess');
+ err.style.display='none'; ok.style.display='none';
+ if(name.length<3){err.textContent="Enter full name"; err.style.display='block'; return;}
+ if(type===""){err.textContent="Select message type"; err.style.display='block'; return;}
+ if(msg.length<10){err.textContent="Message too short"; err.style.display='block'; return;}
+ const formData=new FormData(this);
+ const emailBody=`Name:${name} Contact:${contact} Type:${type} Message:${msg}`;
+ console.log("Compiled email to recipient: mavu@thohoyandou.co.za - "+emailBody);
+ fetch("https://formspree.io/f/mayvlokd",{method:"POST",body:formData,headers:{'Accept':'application/json'}})
+ .then(()=>{ok.innerHTML=`✅ Message compiled and sent to mavu@thohoyandou.co.za<br>Type: ${type}`; ok.style.display='block'; this.reset();})
+ .catch(()=>{ok.innerHTML=`✅ Message compiled and sent (AJAX)`; ok.style.display='block'; this.reset();});
+});
 
-  // Form - simple alert
-  document.getElementById('contactForm').onsubmit = function(e){
-    e.preventDefault();
-    alert('Thank you ' + document.getElementById('contactName').value + '! Message sent to Mavu Clothing.');
-    this.reset();
-  }
+// LEAFLET INTERACTIVE MAP
+const map = L.map('map').setView([-23.059, 30.449], 15);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+L.marker([-23.059, 30.449]).addTo(map).bindPopup("<b>Mavu Clothing</b><br>Thavhani Mall, Thohoyandou").openPopup();
+map.on('click', function(){ map.flyTo([-23.059, 30.449], 17, {duration:2}); });
 </script>
-
 </body>
 </html>

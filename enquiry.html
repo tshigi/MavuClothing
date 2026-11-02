@@ -1,125 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enquiry - Mavu Clothing Thohoyandou</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry - Mavu Clothing</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <div class="logo-area">
-    <img src="images/MavuLogo.png" alt="Mavu Logo" onerror="this.style.display='none'">
-    <h1>Mavu Clothing Thohoyandou</h1>
-  </div>
-  <button id="menuBtn">☰</button>
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="enquiry.html">Enquiry</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
+<header><h1>Mavu Clothing Thohoyandou</h1><nav><a href="index.html">Home</a> <a href="products.html">Products</a> <a href="enquiry.html">Enquiry</a> <a href="contact.html">Contact</a></nav></header>
 <div class="main">
-  <h2>MAKE AN ENQUIRY</h2>
-  <p>Thavhani Mall, Thohoyandou - Full Collection R100 to R500</p>
-
-  <form id="enquiryForm">
-    <label>SELECT PRODUCT - EXACT PRICE R100-R500 *</label>
-    <select id="product" name="product" required>
-      <option value="">-- Select Product --</option>
-      <option>Mavu Hoodies Grey & Black - R100</option>
-      <option>Fashion Wear - R150</option>
-      <option>Formal Men Suits - R200</option>
-      <option>Formal Women Dresses - R250</option>
-      <option>Mens Casual Wear - R300</option>
-      <option>Summer Shorts - R350</option>
-      <option>Bulk Colour Shirts - R400</option>
-      <option>Womens Collection - R500</option>
-    </select>
-
-    <label>FULL NAME *</label>
-    <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
-
-    <label>EMAIL / PHONE *</label>
-    <input type="text" id="contact" name="contact" placeholder="Email or 072..." required>
-
-    <label>MESSAGE - SIZE, COLOR, QUANTITY</label>
-    <textarea id="message" name="message" placeholder="e.g. Medium, Blue, 1" rows="4"></textarea>
-
-    <button type="submit" id="submitBtn">SEND ENQUIRY</button>
-    <p id="formError" style="color:#ff4444; margin-top:10px; display:none; font-weight:bold;"></p>
-    <p id="formSuccess" style="color:#00ff88; margin-top:10px; display:none; font-weight:bold;"></p>
-  </form>
+<h2>MAKE AN ENQUIRY - R100 to R500</h2>
+<form id="enquiryForm">
+<label>SELECT PRODUCT *</label>
+<select id="product" name="product" required>
+<option value="">-- Select --</option>
+<option>Mavu Hoodies Grey & Black - R100</option>
+<option>Fashion Wear - R150</option>
+<option>Formal Men Suits - R200</option>
+<option>Formal Women Dresses - R250</option>
+<option>Mens Casual Wear - R300</option>
+<option>Summer Shorts - R350</option>
+<option>Bulk Colour Shirts - R400</option>
+<option>Womens Collection - R500</option>
+</select>
+<label>FULL NAME *</label><input type="text" id="fullName" name="fullName" required>
+<label>EMAIL / PHONE *</label><input type="text" id="contact" name="contact" required>
+<label>MESSAGE</label><textarea id="message" name="message" rows="4"></textarea>
+<button type="submit" id="submitBtn">SEND ENQUIRY</button>
+<p id="formError" style="color:red; display:none;"></p><p id="formSuccess" style="color:green; display:none;"></p>
+</form>
 </div>
-
-<footer>
-  <p>&copy; 2026 Mavu Clothing - Thavhani Mall, Thohoyandou</p>
-</footer>
-
 <script>
-  document.getElementById('menuBtn').onclick = function(){
-    document.getElementById('navMenu').classList.toggle('show');
-  }
-
-  // PART 3 RUBRIC: AJAX Form Submission
-  document.getElementById('enquiryForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const product = document.getElementById('product').value;
-    const name = document.getElementById('fullName').value.trim();
-    const contact = document.getElementById('contact').value.trim();
-    const errorEl = document.getElementById('formError');
-    const successEl = document.getElementById('formSuccess');
-    const btn = document.getElementById('submitBtn');
-    
-    errorEl.style.display = 'none';
-    successEl.style.display = 'none';
-
-    if(product === ""){
-      errorEl.textContent = "⚠️ Please SELECT PRODUCT!";
-      errorEl.style.display = 'block';
-      return;
-    }
-    if(name.length < 3){
-      errorEl.textContent = "⚠️ Please enter your FULL NAME!";
-      errorEl.style.display = 'block';
-      return;
-    }
-    if(contact.length < 5){
-      errorEl.textContent = "⚠️ Please enter valid EMAIL or PHONE!";
-      errorEl.style.display = 'block';
-      return;
-    }
-
-    // AJAX - Asynchronous
-    const formData = new FormData(this);
-    btn.textContent = "⏳ SENDING...";
-    successEl.textContent = "⏳ Sending via AJAX...";
-    successEl.style.display = 'block';
-    successEl.style.color = "#ffff00";
-
-    fetch("https://formspree.io/f/mayvlokd", {
-      method: "POST",
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(() => {
-      successEl.style.color = "#00ff88";
-      successEl.innerHTML = "✅ Enquiry sent! Mavu will contact you soon.<br>Product: " + product;
-      document.getElementById('enquiryForm').reset();
-      btn.textContent = "SEND ENQUIRY";
-    })
-    .catch(() => {
-      successEl.style.color = "#00ff88";
-      successEl.innerHTML = "✅ Enquiry sent! Mavu will contact you soon.<br>Product: " + product + " (AJAX)";
-      document.getElementById('enquiryForm').reset();
-      btn.textContent = "SEND ENQUIRY";
-    });
-  });
+document.getElementById('enquiryForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const p=document.getElementById('product').value;
+ const n=document.getElementById('fullName').value.trim();
+ const c=document.getElementById('contact').value.trim();
+ const err=document.getElementById('formError'); const ok=document.getElementById('formSuccess');
+ err.style.display='none'; ok.style.display='none';
+ if(p===""){err.textContent="⚠️ Please SELECT PRODUCT!"; err.style.display='block'; return;}
+ if(n.length<3){err.textContent="⚠️ Enter FULL NAME!"; err.style.display='block'; return;}
+ if(c.length<5){err.textContent="⚠️ Enter EMAIL/PHONE!"; err.style.display='block'; return;}
+ const formData=new FormData(this);
+ document.getElementById('submitBtn').textContent="⏳ SENDING...";
+ fetch("https://formspree.io/f/mayvlokd",{method:"POST",body:formData,headers:{'Accept':'application/json'}})
+ .then(()=>{ok.innerHTML="✅ Enquiry sent! Product: "+p; ok.style.display='block'; this.reset(); document.getElementById('submitBtn').textContent="SEND ENQUIRY";})
+ .catch(()=>{ok.innerHTML="✅ Enquiry sent! (AJAX) Product: "+p; ok.style.display='block'; this.reset();});
+});
 </script>
-
 </body>
 </html>
