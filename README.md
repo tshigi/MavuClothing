@@ -71,7 +71,8 @@ For POE Part 3, the website from Part 1 and 2 was upgraded to meet all final req
     - Products resized to small uniform cards
     - Added Flexbox grid layout
     - Responsive on mobile
-    - <img width="1600" height="1198" alt="mavu1" src="https://github.com/user-attachments/assets/fc2dd525-b5ab-49ec-a353-cdbc4ddcfbe0" />
+    - <img width="1600" height="1198" alt="wede7" src="https://github.com/user-attachments/assets/528a8645-a365-48c4-825c-1f5653140a5f" />
+
 
 
 4.  **JavaScript Functionality Added**
