@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mavu Clothing Store Thohoyandou - Affordable streetwear for everyone">
-<title>Mavu Clothing Thohoyandou</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mavu Clothing - Authentic streetwear from Thohoyandou, Thavhani Mall">
+  <title>Mavu Clothing - Thohoyandou</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">
+  <div class="logo-area">
     <img src="images/MavuLogo.png" alt="Mavu Logo">
     <h1>Mavu Clothing Thohoyandou</h1>
   </div>
-  <button class="hamburger" id="hamburger">☰</button>
-  <nav id="navMenu">
+  <button id="menuBtn">☰</button>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
@@ -26,22 +26,58 @@
 
 <div class="main">
   <div class="hero">
-    <h2>Mavu Streetwear<br>Thohoyandou Collection<span>Authentic local brand from Thohoyandou, Limpopo - Quality streetwear R100-R500</span></h2>
-    <a href="products.html" class="btn">Shop Collection →</a>
+    <h2>Mavu Streetwear<br>Thohoyandou Collection</h2>
+    <p>Authentic local brand from Thohoyandou, Limpopo - Quality Streetwear R100-R500</p>
+    <a href="products.html" class="btn" style="display:inline-block; margin-top:15px; background:#fff; color:#000; padding:12px 24px; text-decoration:none; font-weight:900; text-transform:uppercase; font-size:0.85rem;">Shop Collection →</a>
   </div>
 
   <h2>Latest Drop</h2>
   <div class="grid">
-    <div class="item"><img src="images/hoodies.jpg" class="pic"><div class="info"><h3>Mavu Hoodies</h3><p>Warm & Stylish</p></div></div>
-    <div class="item"><img src="images/Fashion.jpg" class="pic"><div class="info"><h3>Fashion Wear</h3><p>Trending Styles</p></div></div>
-    <div class="item"><img src="images/Formalmen.jpg" class="pic"><div class="info"><h3>Formal Men</h3><p>Smart Looks</p></div></div>
-    <div class="item"><img src="images/Shorts.jpg" class="pic"><div class="info"><h3>Summer Shorts</h3><p>Cool & Comfortable</p></div></div>
+    <div class="item" data-name="mavu hoodies grey black">
+      <img src="images/hoodies.jpg" class="pic" alt="Mavu Hoodies">
+      <div class="info">
+        <h3>Mavu Hoodies Grey & Black</h3>
+        <p>R350 - R450</p>
+        <a href="enquiry.html" class="enq">Enquire Now</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="fashion wear">
+      <img src="images/Fashion.jpg" class="pic" alt="Fashion Wear">
+      <div class="info">
+        <h3>Fashion Wear</h3>
+        <p>R250 - R400</p>
+        <a href="enquiry.html" class="enq">Enquire Now</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="formal men suits">
+      <img src="images/Formalmen.jpg" class="pic" alt="Formal Men">
+      <div class="info">
+        <h3>Formal Men Suits</h3>
+        <p>R300 - R500</p>
+        <a href="enquiry.html" class="enq">Enquire Now</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="formal women dresses">
+      <img src="images/Formalwomen.jpg" class="pic" alt="Formal Women">
+      <div class="info">
+        <h3>Formal Women Dresses</h3>
+        <p>R250 - R450</p>
+        <a href="enquiry.html" class="enq">Enquire Now</a>
+      </div>
+    </div>
   </div>
 </div>
 
-<div id="lightbox"><img id="lightbox-img"></div>
+<div id="lightbox">
+  <img id="lightbox-img" src="" alt="Preview">
+</div>
 
-<footer>Mavu Clothing Thohoyandou • Thavhani Mall • 076 877 5761 • R100-R500</footer>
+<footer>
+  <p>&copy; 2026 Mavu Clothing Store - Thavhani Mall, Thohoyandou</p>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
