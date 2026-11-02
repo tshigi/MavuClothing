@@ -1,34 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products - Mavu R100-R500</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Mavu R100-R500</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-<div class="logo"><img src="images/MavuLogo.png" alt="Mavu Logo"><h1>Mavu Clothing Thohoyandou</h1></div>
-<button class="hamburger" id="hamburger">☰</button>
-<nav id="navMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav>
+  <div class="logo-area">
+    <img src="images/MavuLogo.png" alt="Mavu Logo">
+    <h1>Mavu Clothing Thohoyandou</h1>
+  </div>
+  <button id="menuBtn">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
+
 <div class="main">
-<h2>Collection - R100 to R500</h2>
-<input type="text" id="search" placeholder="Search products..." onkeyup="filterProducts()">
-<div class="grid">
-<div class="item" data-name="mavu hoodies grey black"><img src="images/hoodies.jpg" class="pic"><div class="info"><h3>Mavu Hoodies Grey & Black</h3><p>R350 - R450</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="fashion wear"><img src="images/Fashion.jpg" class="pic"><div class="info"><h3>Fashion Wear</h3><p>R250 - R400</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="formal men suits"><img src="images/Formalmen.jpg" class="pic"><div class="info"><h3>Formal Men Suits</h3><p>R300 - R500</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="formal women dresses"><img src="images/Formalwomen.jpg" class="pic"><div class="info"><h3>Formal Women Dresses</h3><p>R250 - R450</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="mens casual wear"><img src="images/Mens.jpg" class="pic"><div class="info"><h3>Mens Casual Wear</h3><p>R150 - R300</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="shorts summer"><img src="images/Shorts.jpg" class="pic"><div class="info"><h3>Summer Shorts</h3><p>R100 - R250</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="bulk colour shirts bundle"><img src="images/wede1.jpg" class="pic"><div class="info"><h3>Bulk Colour Shirts</h3><p>R200 - R450</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="Kids Collection"><img src="images/wede4.jpg" class="pic"><div class="info"><h3>Kids Collection</h3><p>R180 - R350</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-<div class="item" data-name="Womens Collection"><img src="images/wede3.jpg" class="pic"><div class="info"><h3>Womens Collection</h3><p>R120 - R299</p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+  <h2 style="text-align:center; margin:20px 0;">COLLECTION - R100 TO R500</h2>
+  
+  <input type="text" id="search" placeholder="Search products..." style="width:90%; margin:10px 5%; padding:12px; background:#111; color:#fff; border:1px solid #333;">
+
+  <div class="grid">
+
+    <div class="item" data-name="mavu hoodies grey black">
+      <img src="images/hoodies.jpg" class="pic" alt="Mavu Hoodies">
+      <div class="info">
+        <h3>MAVU HOODIES GREY & BLACK</h3>
+        <p><strong>R100</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="fashion wear">
+      <img src="images/Fashion.jpg" class="pic" alt="Fashion Wear">
+      <div class="info">
+        <h3>FASHION WEAR</h3>
+        <p><strong>R150</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="formal men suits">
+      <img src="images/Formalmen.jpg" class="pic" alt="Formal Men">
+      <div class="info">
+        <h3>FORMAL MEN SUITS</h3>
+        <p><strong>R200</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="formal women dresses">
+      <img src="images/Formalwomen.jpg" class="pic" alt="Formal Women">
+      <div class="info">
+        <h3>FORMAL WOMEN DRESSES</h3>
+        <p><strong>R250</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="summer shorts">
+      <img src="images/hoodies.jpg" class="pic" alt="Summer Shorts">
+      <div class="info">
+        <h3>SUMMER SHORTS</h3>
+        <p><strong>R300</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="classic tee">
+      <img src="images/Fashion.jpg" class="pic" alt="Classic Tee">
+      <div class="info">
+        <h3>CLASSIC TEE WHITE</h3>
+        <p><strong>R350</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="bucket hat">
+      <img src="images/Formalmen.jpg" class="pic" alt="Bucket Hat">
+      <div class="info">
+        <h3>BUCKET HAT BLACK</h3>
+        <p><strong>R400</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="jogger pants">
+      <img src="images/Formalwomen.jpg" class="pic" alt="Jogger Pants">
+      <div class="info">
+        <h3>JOGGER PANTS BLACK</h3>
+        <p><strong>R450</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="item" data-name="track suit">
+      <img src="images/hoodies.jpg" class="pic" alt="Track Suit">
+      <div class="info">
+        <h3>TRACK SUIT FULL SET</h3>
+        <p><strong>R500</strong></p>
+        <a href="enquiry.html" class="enq">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+  </div>
 </div>
-</div>
-<div id="lightbox"><img id="lightbox-img"></div>
-<footer>Mavu Clothing - 076 877 5761 - Thavhani Mall</footer>
+
+<footer>
+  <p>&copy; 2026 Mavu Clothing Store - Thavhani Mall, Thohoyandou</p>
+</footer>
+
 <script src="js/main.js"></script>
 </body>
 </html>
