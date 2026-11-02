@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enquiry - Mavu Clothing</title>
+  <title>Enquiry - Mavu Clothing Thohoyandou</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,7 @@
     <img src="images/MavuLogo.png" alt="Mavu Logo">
     <h1>Mavu Clothing Thohoyandou</h1>
   </div>
-  <button id="menuBtn">☰</button>
-  <nav id="mainNav">
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
@@ -23,42 +22,41 @@
   </nav>
 </header>
 
-<main>
-  <div class="form-box">
-    <h2>Make an Enquiry</h2>
-    <p>Thavhani Mall, Thohoyandou - Full Collection R100 to R500</p>
-    <form>
-      <label>Full Name</label>
-      <input type="text" id="fullName" placeholder="Thendo Mavu" required>
+<div class="main">
+  <h2>MAKE AN ENQUIRY</h2>
+  <p>Thavhani Mall, Thohoyandou - Full Collection R100 to R500</p>
 
-      <label>Email</label>
-      <input type="email" id="email" placeholder="your@email.com" required>
+  <form>
+    <label>Select Product - Exact Price R100-R500</label>
+    <select required>
+      <option value="">-- Select Product --</option>
+      <option>Mavu Hoodies Grey & Black - R100</option>
+      <option>Fashion Wear - R150</option>
+      <option>Formal Men Suits - R200</option>
+      <option>Formal Women Dresses - R250</option>
+      <option>Mens Casual Wear - R300</option>
+      <option>Summer Shorts - R350</option>
+      <option>Bulk Colour Shirts - R400</option>
+      <option>Kids Collection - R450</option>
+      <option>Womens Collection - R500</option>
+    </select>
 
-      <label>Product - Full List</label>
-      <select id="product">
-        <option>Mavu Hoodies Grey & Black - R350-R450</option>
-        <option>Fashion Wear - R250-R400</option>
-        <option>Formal Men Suits - R300-R500</option>
-        <option>Formal Women Dresses - R250-R450</option>
-        <option>Mens Casual Wear - R150-R300</option>
-        <option>Summer Shorts - R100-R250</option>
-        <option>Bulk Colour Shirts - R200-R450</option>
-        <option>Kids Collection - R180-R350</option>
-        <option>Womens Collection - R120-R299</option>
-      </select>
+    <label>Full Name</label>
+    <input type="text" placeholder="Your Name" required>
 
-      <label>Message - Size, Color, Quantity</label>
-      <textarea id="message" rows="4" placeholder="e.g. Medium, Blue, 1" required></textarea>
+    <label>Email / Phone</label>
+    <input type="text" placeholder="Email or 072..." required>
 
-      <button type="submit">Send Enquiry</button>
-    </form>
-  </div>
-</main>
+    <label>Message - Size, Color, Quantity</label>
+    <textarea placeholder="e.g. Medium, Blue, 1" rows="4"></textarea>
+
+    <button type="submit">SEND ENQUIRY</button>
+  </form>
+</div>
 
 <footer>
-  <p>&copy; 2026 Mavu Clothing Store - Thavhani Mall, Thohoyandou</p>
+  <p>&copy; 2026 Mavu Clothing - Thavhani Mall, Thohoyandou</p>
 </footer>
 
-<script src="js/main.js"></script>
 </body>
 </html>
