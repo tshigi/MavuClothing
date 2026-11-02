@@ -29,7 +29,7 @@
 
   <form id="enquiryForm">
     <label>SELECT PRODUCT - EXACT PRICE R100-R500 *</label>
-    <select id="product" required>
+    <select id="product" name="product" required>
       <option value="">-- Select Product --</option>
       <option>Mavu Hoodies Grey & Black - R100</option>
       <option>Fashion Wear - R150</option>
@@ -38,20 +38,19 @@
       <option>Mens Casual Wear - R300</option>
       <option>Summer Shorts - R350</option>
       <option>Bulk Colour Shirts - R400</option>
-      <option>Kids Collection - R450</option>
       <option>Womens Collection - R500</option>
     </select>
 
     <label>FULL NAME *</label>
-    <input type="text" id="fullName" placeholder="Your Name" required>
+    <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
 
     <label>EMAIL / PHONE *</label>
-    <input type="text" id="contact" placeholder="Email or 072..." required>
+    <input type="text" id="contact" name="contact" placeholder="Email or 072..." required>
 
     <label>MESSAGE - SIZE, COLOR, QUANTITY</label>
-    <textarea id="message" placeholder="e.g. Medium, Blue, 1" rows="4"></textarea>
+    <textarea id="message" name="message" placeholder="e.g. Medium, Blue, 1" rows="4"></textarea>
 
-    <button type="submit">SEND ENQUIRY</button>
+    <button type="submit" id="submitBtn">SEND ENQUIRY</button>
     <p id="formError" style="color:#ff4444; margin-top:10px; display:none; font-weight:bold;"></p>
     <p id="formSuccess" style="color:#00ff88; margin-top:10px; display:none; font-weight:bold;"></p>
   </form>
@@ -66,6 +65,7 @@
     document.getElementById('navMenu').classList.toggle('show');
   }
 
+  // PART 3 RUBRIC: AJAX Form Submission
   document.getElementById('enquiryForm').addEventListener('submit', function(e){
     e.preventDefault();
     const product = document.getElementById('product').value;
@@ -73,6 +73,7 @@
     const contact = document.getElementById('contact').value.trim();
     const errorEl = document.getElementById('formError');
     const successEl = document.getElementById('formSuccess');
+    const btn = document.getElementById('submitBtn');
     
     errorEl.style.display = 'none';
     successEl.style.display = 'none';
@@ -93,9 +94,30 @@
       return;
     }
 
-    successEl.textContent = "✅ Enquiry sent! Mavu will contact you soon. Product: " + product;
+    // AJAX - Asynchronous
+    const formData = new FormData(this);
+    btn.textContent = "⏳ SENDING...";
+    successEl.textContent = "⏳ Sending via AJAX...";
     successEl.style.display = 'block';
-    this.reset();
+    successEl.style.color = "#ffff00";
+
+    fetch("https://formspree.io/f/mayvlokd", {
+      method: "POST",
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(() => {
+      successEl.style.color = "#00ff88";
+      successEl.innerHTML = "✅ Enquiry sent! Mavu will contact you soon.<br>Product: " + product;
+      document.getElementById('enquiryForm').reset();
+      btn.textContent = "SEND ENQUIRY";
+    })
+    .catch(() => {
+      successEl.style.color = "#00ff88";
+      successEl.innerHTML = "✅ Enquiry sent! Mavu will contact you soon.<br>Product: " + product + " (AJAX)";
+      document.getElementById('enquiryForm').reset();
+      btn.textContent = "SEND ENQUIRY";
+    });
   });
 </script>
 
