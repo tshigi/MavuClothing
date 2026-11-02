@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
   <div class="logo-area">
-    <img src="images/MavuLogo.png" alt="Mavu Logo">
+    <img src="images/MavuLogo.png" alt="Mavu Logo" onerror="this.style.display='none'">
     <h1>Mavu Clothing Thohoyandou</h1>
   </div>
+  <button id="menuBtn">☰</button>
   <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -60,37 +62,41 @@
 </footer>
 
 <script>
-document.getElementById('enquiryForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const product = document.getElementById('product').value;
-  const name = document.getElementById('fullName').value.trim();
-  const contact = document.getElementById('contact').value.trim();
-  const errorEl = document.getElementById('formError');
-  const successEl = document.getElementById('formSuccess');
-  
-  errorEl.style.display = 'none';
-  successEl.style.display = 'none';
-
-  if(product === ""){
-    errorEl.textContent = "⚠️ Please SELECT PRODUCT!";
-    errorEl.style.display = 'block';
-    return;
-  }
-  if(name.length < 3){
-    errorEl.textContent = "⚠️ Please enter your FULL NAME (at least 3 letters)!";
-    errorEl.style.display = 'block';
-    return;
-  }
-  if(contact.length < 5){
-    errorEl.textContent = "⚠️ Please enter valid EMAIL or PHONE!";
-    errorEl.style.display = 'block';
-    return;
+  document.getElementById('menuBtn').onclick = function(){
+    document.getElementById('navMenu').classList.toggle('show');
   }
 
-  successEl.textContent = "✅ Enquiry sent! Mavu Thohoyandou will contact you soon. Product: " + product;
-  successEl.style.display = 'block';
-  this.reset();
-});
+  document.getElementById('enquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const product = document.getElementById('product').value;
+    const name = document.getElementById('fullName').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+    const errorEl = document.getElementById('formError');
+    const successEl = document.getElementById('formSuccess');
+    
+    errorEl.style.display = 'none';
+    successEl.style.display = 'none';
+
+    if(product === ""){
+      errorEl.textContent = "⚠️ Please SELECT PRODUCT!";
+      errorEl.style.display = 'block';
+      return;
+    }
+    if(name.length < 3){
+      errorEl.textContent = "⚠️ Please enter your FULL NAME!";
+      errorEl.style.display = 'block';
+      return;
+    }
+    if(contact.length < 5){
+      errorEl.textContent = "⚠️ Please enter valid EMAIL or PHONE!";
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    successEl.textContent = "✅ Enquiry sent! Mavu will contact you soon. Product: " + product;
+    successEl.style.display = 'block';
+    this.reset();
+  });
 </script>
 
 </body>

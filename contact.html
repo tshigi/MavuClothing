@@ -5,12 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Mavu Clothing</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      padding: 20px;
+    }
+
+    .form-box {
+      background: #0c0c0c;
+      border: 1px solid #222;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-box h2 {
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .form-box p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      margin-top: 6px;
+      padding: 12px;
+      background: #000;
+      border: 1px solid #333;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+      color: #555;
+    }
+
+    form button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background: #fff;
+      color: #000;
+      border: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .form-box div {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="logo-area">
-    <img src="images/MavuLogo.png" alt="Mavu Logo">
+    <img src="images/MavuLogo.png" alt="Mavu Logo" onerror="this.style.display='none'">
     <h1>Mavu Clothing Thohoyandou</h1>
   </div>
   <button id="menuBtn">☰</button>
@@ -72,6 +146,19 @@
   <p>&copy; 2026 Mavu Clothing Store - Thavhani Mall, Thohoyandou</p>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+  // Menu
+  document.getElementById('menuBtn').onclick = function(){
+    document.getElementById('mainNav').classList.toggle('show');
+  }
+
+  // Form - simple alert
+  document.getElementById('contactForm').onsubmit = function(e){
+    e.preventDefault();
+    alert('Thank you ' + document.getElementById('contactName').value + '! Message sent to Mavu Clothing.');
+    this.reset();
+  }
+</script>
+
 </body>
 </html>
