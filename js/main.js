@@ -1,21 +1,34 @@
-document.getElementById('hamburger').addEventListener('click', function() {
-  document.getElementById('navMenu').classList.toggle('active');
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const mainNav = document.getElementById("mainNav");
+  if(menuBtn){
+    menuBtn.addEventListener("click", () => {
+      mainNav.classList.toggle("active");
+    });
+  }
 
-document.querySelectorAll('#navMenu a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navMenu').classList.remove('active');
-  });
-});
+  const form = document.querySelector("form");
+  if(form){
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const fullName = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-
-document.querySelectorAll('.pic').forEach(img => {
-  img.addEventListener('click', function() {
-    document.getElementById('lightbox').style.display = 'flex';
-    document.getElementById('lightbox-img').src = this.src;
-  });
-});
-
-document.getElementById('lightbox').addEventListener('click', function() {
-  this.style.display = 'none';
+      if(fullName === ""){
+        alert("Please enter your Full Name");
+        return;
+      }
+      if(email === "" || !email.includes("@")){
+        alert("Please enter valid Email");
+        return;
+      }
+      if(message === ""){
+        alert("Please enter Message - Size, Color, Quantity");
+        return;
+      }
+      alert("Thank you " + fullName + "! Enquiry sent. We will contact you at " + email);
+      form.reset();
+    });
+  }
 });
