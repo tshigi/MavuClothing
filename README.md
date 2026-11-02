@@ -85,6 +85,8 @@ For POE Part 3, the website from Part 1 and 2 was upgraded to meet all final req
     - Added meta descriptions and viewport tags
     - Media queries for mobile devices
     - External stylesheet `style.css` for all pages
+    - <img width="720" height="1600" alt="wede4" src="https://github.com/user-attachments/assets/f732ba42-2777-45ca-b8e1-9fa67c3e074e" />
+
 
 6.  **Live Deployment**
     - Website deployed and tested on GitHub Pages
@@ -109,5 +111,6 @@ For POE Part 3, the website from Part 1 and 2 was upgraded to meet all final req
 Technology used
 > HTML
 > CSS
+> JavaScript 
 
 
