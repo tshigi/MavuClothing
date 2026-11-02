@@ -56,12 +56,11 @@ For POE Part 3, the website from Part 1 and 2 was upgraded to meet all final req
 
 **What was upgraded for Part 3:
 
-1.  **Live Location Map Added - Contact Page**
-    - Added live Google Maps embed for Thavhani Mall, Thohoyandou
-    - Interactive map with pin, directions and "Open in Maps"
-    - Works on live GitHub Pages
-    -<img width="1600" height="1198" alt="mavu2" src="https://github.com/user-attachments/assets/49fc6434-7466-468c-8814-0c9853369432" />
- 
+1.  *- Contact Page**
+    - implemented dropdown for massage type (General enquiry, complaint or sponsorship
+    - Ajax form submission
+    - leaflet.js map showing Thavhani Mall, Thohoyandou with marker group
+    - <img width="1600" height="1198" alt="wede9" src="https://github.com/user-attachments/assets/f47825da-f867-4985-bd3c-1636b7d5a256" />
 
 2.  **Professional Black & White Theme**
     - Updated CSS to black header/footer with white content boxes
