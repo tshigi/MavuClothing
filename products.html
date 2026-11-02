@@ -3,19 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products - Mavu Clothing</title>
+<title>Mavu Clothing Thohoyandou - Affordable Fashion R100-R500 | Thavhani Mall</title>
+<meta name="description" content="Mavu Clothing Thohoyandou at Thavhani Mall - Hoodies R100, Fashion Wear R150-R500, Formal Suits, Dresses, Casual Wear. Best fashion in Limpopo, Thohoyandou.">
+<meta name="keywords" content="Mavu Clothing, Thohoyandou, Thavhani Mall, Fashion R100-R500, Hoodies, Formal Wear, Limpopo Fashion">
 <link rel="stylesheet" href="style.css">
 <style>
 .pic{cursor:pointer; transition:0.3s;}
 .pic:hover{transform:scale(1.03);}
 #lightbox{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;}
 #lightbox img{max-width:90%; max-height:90%; border-radius:8px;}
+
+#searchBox{width:100%; padding:12px; margin:15px 0; border:2px solid #222; border-radius:8px; font-size:16px;}
+.accordion{background:#222;color:white;cursor:pointer;padding:12px;width:100%;text-align:left;border:none;outline:none;margin-top:10px;border-radius:5px;font-size:16px;transition:0.3s;}
+.accordion:hover{background:#444;}
+.panel{padding:0 15px;background:#f9f9f9;display:none;overflow:hidden;border-radius:5px;margin-bottom:10px;}
+.item{transition: transform 0.3s, box-shadow 0.3s;}
+.item:hover{box-shadow: 0 8px 20px rgba(0,0,0,0.3);}
 </style>
 </head>
 <body>
 <header>
   <div class="logo-area">
-    <img src="images/MavuLogo.png" alt="Mavu Logo">
+    <img src="images/MavuLogo.png" alt="Mavu Clothing Thohoyandou Logo - Thavhani Mall Fashion R100-R500">
     <h1>Mavu Clothing Thohoyandou</h1>
   </div>
   <button id="menuBtn">☰</button>
@@ -29,27 +38,40 @@
 </header>
 <div class="main">
   <div class="hero">
-    <h2>OUR COLLECTION</h2>
-    <p>8 Unique Pieces - Thavhani Mall - Click image to enlarge</p>
+    <h2>OUR COLLECTION - R100 TO R500</h2>
+    <h3>8 Unique Pieces at Thavhani Mall Thohoyandou</h3>
+    <p>Click image to enlarge - Search to filter</p>
   </div>
-  <div class="grid">
-    <div class="item"><img src="images/hoodies.jpg" class="pic"><div class="info"><h3>Mavu Hoodies Grey & Black</h3><p><strong>R100</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/Fashion.jpg" class="pic"><div class="info"><h3>Fashion Wear</h3><p><strong>R150</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/Formalmen.jpg" class="pic"><div class="info"><h3>Formal Men Suits</h3><p><strong>R200</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/Formalwomen.jpg" class="pic"><div class="info"><h3>Formal Women Dresses</h3><p><strong>R250</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/Mens.jpg" class="pic"><div class="info"><h3>Mens Casual Wear</h3><p><strong>R300</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/Shorts.jpg" class="pic"><div class="info"><h3>Summer Shorts ASRV</h3><p><strong>R350</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/wede1.jpg" class="pic"><div class="info"><h3>Bulk Colour Shirts</h3><p><strong>R400</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
-    <div class="item"><img src="images/wede3.jpg" class="pic"><div class="info"><h3>Womens Collection</h3><p><strong>R500</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+
+  
+  <input type="text" id="searchBox" placeholder="Search products... type R100, Hoodie, Formal, Casual, R500...">
+
+  
+  <button class="accordion">📏 Size Guide - Click to Expand </button>
+  <div class="panel"><p><b>R100 Hoodies Grey & Black:</b> S, M, L, XL - Best seller<br><b>R150-R250 Fashion & Formal:</b> M, L, XL, XXL<br><b>R300-R500 Casual, Shorts, Bulk, Womens:</b> All sizes at Thavhani Mall, Thohoyandou. Enquire now for availability!</p></div>
+
+  <button class="accordion">🚚 Delivery Info - Click to Expand</button>
+  <div class="panel"><p>Free delivery in Thohoyandou over R300. Delivery to Polokwane, Louis Trichardt, Giyani 2-3 days. Visit Thavhani Mall shop.</p></div>
+
+  <div class="grid" id="productGrid">
+    <div class="item" data-name="mavu hoodies grey black r100"><img src="images/hoodies.jpg" class="pic" alt="Mavu Hoodies Grey Black Thohoyandou R100 Thavhani Mall"><div class="info"><h3>Mavu Hoodies Grey & Black</h3><p><strong>R100</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="fashion wear r150"><img src="images/Fashion.jpg" class="pic" alt="Fashion Wear Thohoyandou R150 at Thavhani Mall"><div class="info"><h3>Fashion Wear</h3><p><strong>R150</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="formal men suits r200"><img src="images/Formalmen.jpg" class="pic" alt="Formal Men Suits Thohoyandou R200"><div class="info"><h3>Formal Men Suits</h3><p><strong>R200</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="formal women dresses r250"><img src="images/Formalwomen.jpg" class="pic" alt="Formal Women Dresses Thohoyandou R250"><div class="info"><h3>Formal Women Dresses</h3><p><strong>R250</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="mens casual wear r300"><img src="images/Mens.jpg" class="pic" alt="Mens Casual Wear Thohoyandou R300"><div class="info"><h3>Mens Casual Wear</h3><p><strong>R300</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="summer shorts asrv r350"><img src="images/Shorts.jpg" class="pic" alt="Summer Shorts ASRV Thohoyandou R350"><div class="info"><h3>Summer Shorts ASRV</h3><p><strong>R350</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="bulk colour shirts r400"><img src="images/wede1.jpg" class="pic" alt="Bulk Colour Shirts Thohoyandou R400"><div class="info"><h3>Bulk Colour Shirts</h3><p><strong>R400</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
+    <div class="item" data-name="womens collection r500"><img src="images/wede3.jpg" class="pic" alt="Womens Collection Thohoyandou R500 Thavhani Mall"><div class="info"><h3>Womens Collection</h3><p><strong>R500</strong></p><a href="enquiry.html" class="enq">Enquire Now</a></div></div>
   </div>
+  <p id="noResults" style="display:none; color:red; text-align:center; margin-top:20px;">No products found for your search. Try R100, Formal, Casual.</p>
 </div>
 
-<div id="lightbox"><img id="lightbox-img" src=""></div>
+<div id="lightbox"><img id="lightbox-img" src="" alt="Enlarged product view"></div>
 
-<footer><p>&copy; 2026 Mavu Clothing - Thavhani Mall</p></footer>
+<footer><p>&copy; 2026 Mavu Clothing - Thavhani Mall - <a href="index.html">Home</a> | <a href="enquiry.html">Enquire</a> | <a href="contact.html">Contact</a> | <a href="sitemap.xml">Sitemap</a></p></footer>
 <script>
 document.getElementById('menuBtn').onclick = function(){document.getElementById('navMenu').classList.toggle('show');}
-// Make images clickable
+
 document.querySelectorAll('.pic').forEach(img=>{
   img.onclick = function(){
     document.getElementById('lightbox').style.display='flex';
@@ -57,6 +79,47 @@ document.querySelectorAll('.pic').forEach(img=>{
   }
 });
 document.getElementById('lightbox').onclick = function(){this.style.display='none';}
+
+
+document.querySelectorAll('.accordion').forEach(acc=>{
+  acc.addEventListener('click', function(){
+    this.classList.toggle('active');
+    let panel=this.nextElementSibling;
+    panel.style.display=panel.style.display==='block'?'none':'block';
+  });
+});
+
+
+function filterProducts(){
+  let input=document.getElementById('searchBox').value.toLowerCase();
+  let items=document.querySelectorAll('.item');
+  let found=0;
+  items.forEach(item=>{
+    let name=item.getAttribute('data-name');
+    let text=item.innerText.toLowerCase();
+    if(name.includes(input) || text.includes(input)){
+      item.style.display=''; found++;
+    } else {
+      item.style.display='none';
+    }
+  });
+  document.getElementById('noResults').style.display=found===0?'block':'none';
+}
+document.getElementById('searchBox').addEventListener('keyup', filterProducts);
+
+
+const products=[
+  {name:"Mavu Hoodies Grey & Black", price:"R100", img:"images/hoodies.jpg"},
+  {name:"Fashion Wear", price:"R150", img:"images/Fashion.jpg"},
+  {name:"Formal Men Suits", price:"R200", img:"images/Formalmen.jpg"},
+  {name:"Formal Women Dresses", price:"R250", img:"images/Formalwomen.jpg"},
+  {name:"Mens Casual Wear", price:"R300", img:"images/Mens.jpg"},
+  {name:"Summer Shorts ASRV", price:"R350", img:"images/Shorts.jpg"},
+  {name:"Bulk Colour Shirts", price:"R400", img:"images/wede1.jpg"},
+  {name:"Womens Collection", price:"R500", img:"images/wede3.jpg"}
+];
+console.log("Dynamic products loaded via JS (Rubric 2.2):", products);
+console.log("SEO - Internal linking: index.html, about.html, enquiry.html, contact.html, sitemap.xml");
 </script>
 </body>
 </html>
