@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enquiry - Mavu Clothing</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mavu Clothing Enquiry - Thohoyandou, Thavhani Mall">
+  <title>Enquiry - Mavu Clothing</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-<div class="logo"><img src="images/MavuLogo.png" alt="Mavu Logo"><h1>Mavu Clothing Thohoyandou</h1></div>
-<button class="hamburger" id="hamburger">☰</button>
-<nav id="navMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav>
+  <div class="logo-area">
+    <img src="images/MavuLogo.png" alt="Mavu Logo">
+    <h1>Mavu Clothing Thohoyandou</h1>
+  </div>
+  <button id="menuBtn">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
-<div class="main">
-<h2>Order Enquiry</h2>
-<div class="box">
-<form id="enquiryForm">
-<label>Full Name</label><input type="text" id="fullName" required placeholder="Thendo Mavu">
-<label style="margin-top:10px; display:block;">Email</label><input type="email" id="email" required placeholder="your@email.com">
-<label style="margin-top:10px; display:block;">Product</label><select id="productSelect"><option>Mavu Hoodies - R350-R450</option><option>Fashion Wear - R250-R400</option><option>Formal Men - R300-R500</option><option>Summer Shorts - R100-R250</option><option>Kids Dresses - R120-R299</option><option>Custom Logo - R100-R500</option></select>
-<label style="margin-top:10px; display:block;">Message - Size, Color, Quantity</label><textarea id="message" required rows="4" placeholder="e.g. Medium, Blue, 1"></textarea>
-<button type="submit">Send Enquiry</button>
-</form>
-</div>
-</div>
-<footer>Mavu Clothing - 076 877 5761</footer>
+
+<main>
+  <div class="form-box">
+    <h2>Make an Enquiry</h2>
+    <p>Thavhani Mall, Thohoyandou</p>
+    <form>
+      <label>Full Name</label>
+      <input type="text" id="fullName" placeholder="Thendo Mavu" required>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="your@email.com" required>
+
+      <label>Product</label>
+      <select id="product">
+        <option>Mavu Hoodies - R350-R450</option>
+        <option>Mavu T-Shirts - R150-R250</option>
+        <option>Mavu Pants - R300-R400</option>
+        <option>Mavu Dresses - R250-R350</option>
+      </select>
+
+      <label>Message - Size, Color, Quantity</label>
+      <textarea id="message" rows="4" placeholder="e.g. Medium, Blue, 1" required></textarea>
+
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Mavu Clothing Store - Thavhani Mall, Thohoyandou</p>
+</footer>
+
 <script src="js/main.js"></script>
 </body>
 </html>
